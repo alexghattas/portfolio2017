@@ -1,0 +1,26 @@
+@mixin mq($size) {
+
+	@if ($size == 'xsmall') {
+		@media (max-width: 300px) { 
+			@content; 
+		}
+	}
+
+	@if ($size == 'small') {
+		@media (max-width: 540px) { 
+			@content; 
+		}
+	}
+
+	@if ($size == 'medium') {
+		@media (max-width: 720px) { 
+			@content; 
+		}
+	}
+ 
+	@if $size == 'large' {
+		@media (max-width: 992px) { 
+			@content; 
+		}
+	}
+}

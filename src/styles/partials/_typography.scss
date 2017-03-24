@@ -1,0 +1,52 @@
+h1 {
+	font-family: $secondaryFont;
+	font-weight: 300;
+	font-size: 90px;
+	color: $colorGold;
+	line-height: 85%;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-family: $secondaryFont;
+	color: $colorBlueDark;
+}
+
+h3 {
+	font-family: $secondaryFont;
+	font-weight: 300;
+	color: white;
+	font-size: 46px;
+
+}
+
+h4 {
+	font-family: $primaryFont;
+}
+
+h5 {
+	font-family: $primaryFont;
+	color: white;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: 100;
+}
+
+
+h6 {
+	font-family: $primaryFont;
+	color: $colorGold;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+p {
+	font-family: $primaryFont;
+	color: white;
+	font-weight: 300;
+}
+
