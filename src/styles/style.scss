@@ -27,11 +27,22 @@ body {
 }
 
 .wrapperPortfolio {
-	// position: relative;
 	max-width: 1170px;
 	margin: 0 auto;
 }
 
+.wrapperSkills {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.wrapperContact {
+	max-width: 1170px;
+	margin: 0 auto;
+	h2 {
+		color: $colorBlueDark;
+	}
+}
 
 
 
@@ -316,13 +327,87 @@ body {
 	// Skill Set Section
 .skillSet__section {
 	background: $colorGreyDark;
-	height: 200px;
-	width: 120%;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 300px;
-	transform: skew(10deg, 10deg);
+	margin-top: 800px;
+	@include angled-edge('outside top',
+	 'upper right',
+	 $colorGreyDark, 500);
+	@include angled-edge('outside bottom',
+	 'lower left',
+	 $colorGreyDark, 500);
+}
 
+.skillSet__header {
+	text-align: center;
+	margin-bottom: 80px;
+	h2 {
+		color: white;
+		font-size: 75px;
+		font-weight: 300;
+	}
+	h6 {
+		letter-spacing: 3px;
+		padding-bottom: 20px;
+	}
+}
+
+.skillsSets__content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skillsSets__content h5 {
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+.skillSets__contentLanguages {
+	width: 50%;
+	padding: 0 50px;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.skillSets__contentTools {
+	width: 50%;
+	padding: 0 50px;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.skillsSets__content ul {
+	padding-left: 0;
+	li {
+		list-style: none;
+		margin: 20px 0;
+	}
+}
+
+.skillsSets__content i {
+	color: $colorGold;
+	font-size: 80px;
+	padding: 10px 30px;
+}
+
+.skillSets__contentTools--learning {
+	margin-top: 60px;
+}
+
+
+
+
+
+
+	// Contact Section
+.contactHeader {
+	margin-top: 400px;
+	text-align: center;
 }
 
 
