@@ -18,9 +18,9 @@
 		}
 	}
  
-	@if $size == 'large' {
+	@if ($size == 'large') {
 		@media (max-width: 992px) { 
-			@content; 
+			@content;
 		}
 	}
 }

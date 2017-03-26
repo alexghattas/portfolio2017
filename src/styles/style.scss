@@ -1,7 +1,7 @@
 @import "partials/_variables";
 @import "partials/_setup";
-@import "partials/_typography";
 @import "partials/_mixins";
+@import "partials/_typography";
 @import "partials/angled-edges";
 
 // * {border: 1px solid red;}
@@ -29,6 +29,9 @@ body {
 .wrapperPortfolio {
 	max-width: 1170px;
 	margin: 0 auto;
+	@include mq(small) {
+		margin-top: 280px;
+	}
 }
 
 .wrapperSkills {
@@ -133,10 +136,6 @@ body {
 
 
 
-
-
-
-
 // .heroSection {
 // 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
 // 	clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
@@ -160,9 +159,25 @@ body {
 	color: red;
 	position: absolute;
 	width: 400px;
-	top: 335px;
+	top: 290px;
 	right: 0px;
 	z-index: 10;
+	@include mq(large) {
+		right: 30px;
+		top: 6em;
+		text-align: center;
+	}
+	@include mq(medium) {
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+	@include mq(small) {
+		width: 100%;
+		top: 4em;
+	}
 	h1{
 		span {
 			color: white;
@@ -171,20 +186,34 @@ body {
 	}
 	h5 {
 		letter-spacing: 2px;
+		@include mq(small) {
+			padding: 5px 0;
+		}
 	}
 }
 
 .introductionText {
-	position: relative;
+	position: absolute;
 	text-align: center;
 	color: white;
 	z-index: 15;
-	bottom: 886px;
+	top: 47rem;
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
+	@include mq(large) {
+		background: rgba(0, 0, 0, 0.8);
+		top: 23rem;
+		padding: 35px 25px;
+	}
+	@include mq(medium) {
+		width: 100%;
+	}
+	@include mq(small) {
+		top: 18rem;
+	}
 	h5 {
 		padding: 15px 0 5px 0;
 		letter-spacing: 4px;
@@ -196,12 +225,21 @@ body {
 		padding: 10px 0 40px 0;
 		letter-spacing: 3px;
 		line-height: 150%;
+		@include mq(large) {
+			padding-bottom: 20px;
+		}
 	}
 	h3 {
 		padding-top: 30px;
+		@include mq(small) {
+			padding-top: 10px;
+		}
 	}
 	a {
 		margin-top: 40px;
+		@include mq(large) {
+			display: none;
+		}
 	}
 }
 
@@ -247,9 +285,19 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 170px;
+	@include mq(large) {
+		bottom: 95px;
+	}
+	@include mq(medium) {
+		width: 100%;
+		bottom: 40px;
+	}
 	h2 {
 		font-size: 80px;
 		font-weight: 300;
+		@include mq(medium) {
+		font-size: 55px;
+		}
 	}
 	h4 {
 		font-weight: 100;
@@ -286,6 +334,11 @@ body {
 	color: $colorBlueLight;
 	letter-spacing: 2px;
 	padding-left: 20px;
+	@include mq(small) {
+		display: block;
+		padding-left: 0;
+		margin-top: 20px;
+	}
 }
 
 .portfolioItems__devIcons {
@@ -293,6 +346,12 @@ body {
 	list-style: none;
 	padding-left: 0;
 	padding: 5px 0 10px 0;
+	@include mq(large) {
+		justify-content: center;
+	}
+	@include mq(small) {
+		padding: 10px 0 15px 0;
+	}
 	li {
 		font-size: 40px;
 		padding-right: 15px;
@@ -305,10 +364,16 @@ body {
 .portfolioItems__text {
 	padding: 20px;
 	width: 100%;
+	@include mq(large) {
+		text-align: center;
+	}
 	h2 {
 		color: $colorBlueLight;
 		font-weight: 300;
 		font-size: 45px;
+		@include mq(small) {
+			font-size: 30px;
+		}
 	}
 	p {
 		color: $colorBlueDark;
@@ -322,23 +387,54 @@ body {
 .portfolioItems__one {
 	display: flex;
 	position: relative;
+	@include mq(large) {
+		position: initial;
+		flex-direction: column-reverse;
+		justify-content: center;
+		margin: 0 60px;
+		padding: 35px;
+		background: #eeeeee;
+	}
+	@include mq(medium) {
+		margin: 0 30px;
+		padding: 15px;
+	}
+	@include mq(small) {
+		margin: 0 10px;
+		padding: 10px;
+	}
 }
 
 .portfolioItems__one--image {
 	width: 600px;
 	text-align: left;
 	position: relative;
+	@include mq(large) {
+		width: 100%;
+		text-align: center;
+	}
 	img {
 		width: 900px;
 		position: absolute;
 		left: -320px;
 		bottom: -220px;
+		@include mq(large) {
+			width: 70%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+		}
 	}
 }
 
 .portfolioItems__one--content {
 	width: 50%;
 	display: flex;
+	align-items: center;
+	@include mq(large) {
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 
@@ -348,17 +444,45 @@ body {
 	display: flex;
 	position: relative;
 	margin-top: 400px;
+	@include mq(large) {
+		position: initial;
+		flex-direction: column;
+		justify-content: center;
+		margin: 40px 60px 0px 60px;
+		padding: 35px;
+		background: #eeeeee;
+	}
+	@include mq(medium) {
+		margin: 20px 30px 0px 30px;
+		padding: 15px;
+	}
+	@include mq(small) {
+		margin: 20px 10px 0px 10px;
+		padding: 10px;
+	}
+
 }
 
 .portfolioItems__two--image {
 	width: 600px;
 	text-align: left;
 	position: relative;
+	@include mq(large) {
+		width: 100%;
+		text-align: center;
+		margin: 40px 0;
+	}
 	img {
 		width: 600px;
 		position: absolute;
 		right: -200px;
 		bottom: -90px;
+		@include mq(large) {
+			width: 55%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+		}
 	}
 }
 
@@ -366,6 +490,10 @@ body {
 	width: 50%;
 	display: flex;
 	align-items: center;
+	@include mq(large) {
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 // Portfolio Item Three
@@ -373,6 +501,23 @@ body {
 	display: flex;
 	position: relative;
 	margin-top: 400px;
+	@include mq(large) {
+		position: initial;
+		flex-direction: column-reverse;
+		justify-content: center;
+		margin: 40px 60px 0px 60px;
+		padding: 35px;
+		background: #eeeeee;
+	}
+	@include mq(medium) {
+		margin: 20px 30px 0px 30px;
+		padding: 15px;
+	}
+	@include mq(small) {
+		margin: 20px 10px 0px 10px;
+		padding: 10px;
+	}
+
 }
 
 .portfolioItems__three--image {
@@ -380,17 +525,33 @@ body {
 	text-align: left;
 	position: relative;
 	padding-right: 400px;
+	@include mq(large) {
+		width: 100%;
+		text-align: center;
+		margin: 40px 0;
+		padding-right: 0;
+	}
 	img {
 		width: 650px;
 		position: absolute;
 		left: -200px;
 		bottom: -150px;
+		@include mq(large) {
+			width: 60%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+		}
 	}
 }
 
 .portfolioItems__three--content {
 	width: 50%;
 	display: flex;
+	@include mq(large) {
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 
@@ -405,6 +566,23 @@ body {
 	@include angled-edge('outside bottom',
 	 'lower left',
 	 $colorGreyDark, 500);
+	@include mq(large) {
+		margin-top: 250px;
+		@include angled-edge('outside top',
+		 'upper right',
+		 $colorGreyDark, 200);
+		@include angled-edge('outside bottom',
+		 'lower left',
+		 $colorGreyDark, 200);
+	}
+	@include mq(small) {
+		@include angled-edge('outside top',
+		 'upper right',
+		 $colorGreyDark, 100);
+		@include angled-edge('outside bottom',
+		 'lower left',
+		 $colorGreyDark, 100);
+	}
 }
 
 // .skillSet__section::before {
@@ -415,6 +593,12 @@ body {
 .skillSet__header {
 	text-align: center;
 	margin-bottom: 80px;
+	@include mq(large) {
+		margin-bottom: 60px;
+	}
+	@include mq(small) {
+		padding-top: 60px;
+	}
 	h2 {
 		color: white;
 		font-size: 75px;
@@ -429,6 +613,9 @@ body {
 .skillsSets__content {
 	display: flex;
 	flex-wrap: wrap;
+	@include mq(large) {
+		flex-direction: column;
+	}
 }
 
 .skillsSets__content h5 {
@@ -440,6 +627,12 @@ body {
 .skillSets__contentLanguages {
 	width: 50%;
 	padding: 0 50px;
+	@include mq(large) {
+		width: 100%;
+	}
+	@include mq(small) {
+		padding: 0;
+	}
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -450,6 +643,13 @@ body {
 .skillSets__contentTools {
 	width: 50%;
 	padding: 0 50px;
+	@include mq(large) {
+		width: 100%;
+		margin-top: 60px;
+	}
+	@include mq(small) {
+		padding: 0;
+	}
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -492,6 +692,9 @@ body {
 .contactHeader {
 	padding-top: 200px;
 	text-align: center;
+	@include mq(large) {
+		padding-top: 0;
+	}
 	h4 {
 		color: $colorBlueDark;
 		font-weight: 100;
@@ -511,6 +714,9 @@ body {
 		margin: 10px;
 		font-family: $primaryFont;
 		font-weight: 100;
+		@include mq(small) {
+			width: 95%;
+		}
 	}
 	input[type="submit"] {
 		width: initial;
@@ -523,10 +729,22 @@ body {
 .contactForm__container {
 	display: flex;
 	padding: 0 120px;
+	@include mq(large) {
+		flex-direction: column;
+	}
+	@include mq(medium) {
+		padding: 0 60px;
+	}
+	@include mq(small) {
+		padding: 0 20px;
+	}
 }
 
 .contactForm__container--inputs {
 	width: 70%;
+	@include mq(large) {
+		width: 100%;
+	}
 }
 
 .contactForm__container--info {
@@ -534,6 +752,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	@include mq(large) {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
 	ul {
 		padding-left: 0;
 	}
