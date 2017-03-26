@@ -48,12 +48,22 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
-	z-index: 5;
+	z-index: 999;
 	width: 1170px;
 }
 
 .mainNavigation__logo {
 	color: white;
+	p {
+		font-family: $primaryFont;
+		font-weight: 100;
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+	span {
+		font-weight: 700;
+	}
 }
 
 .mainNavigation__links {
@@ -82,11 +92,64 @@ body {
 
 
 	// Hero Section
+
+// .heroSection {
+// 	height: 1800px;
+// 	background:linear-gradient(to bottom right,rgba(37, 36, 46 ,.9),rgba(37, 36, 46 ,.9)), url('../../assets/StockSnap_Z9PPMFLPO8.jpg');
+// 	background-size: cover;
+// 	background-position: bottom right;
+// }
+
+// .heroSection__triangle {
+// 	position: relative;
+// 	height: 1000px;
+// 	background: url(../../assets/mockup-863469_1280.jpg);
+// 	background-size: cover;
+// 	overflow: hidden;
+// }
+
+// .heroSection__triangleCrop {
+// 	position:absolute;
+// 	content: " ";
+// 	z-index: -1;
+// 	height: 300px;
+// 	left:-5%;
+// 	bottom:-10px;
+// 	transform:rotate(45deg);
+// 	width:110%;
+// 	overflow: hidden;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .heroSection {
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
 	clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
 	height: 1800px;
-	background:linear-gradient(to bottom right,rgba(44, 61, 167, .9),rgba(44, 61, 167, .9)), url('../../assets/mockup-863469_1280.jpg');
+	background:linear-gradient(to bottom right,rgba(7, 119, 147,0.9),rgba(7, 119, 147,0.9)), url('../../assets/mockup-863469_1280.jpg');
 	background-size: cover;
 	background-position: bottom right;
 }
@@ -96,8 +159,8 @@ body {
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
 	clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
 	position: relative;
-	background:linear-gradient(to bottom right,rgba(37, 36, 46 ,.9),rgba(37, 36, 46 ,.9)), url('../../assets/StockSnap_Z9PPMFLPO8.jpg');
-	background-size: cover;
+	background:linear-gradient(to bottom right,rgba(7, 89, 147,0),rgba(37, 36, 46 ,0)), url('../../assets/HackeUGiddy.jpg');
+	background-size: contain;
 	background-position: top;
 }
 
@@ -120,11 +183,11 @@ body {
 }
 
 .introductionText {
-	position: absolute;
+	position: relative;
 	text-align: center;
 	color: white;
 	z-index: 15;
-	bottom: 600px;
+	bottom: 940px;
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
@@ -145,6 +208,9 @@ body {
 	h3 {
 		padding-top: 30px;
 	}
+	a {
+		margin-top: 40px;
+	}
 }
 
 .introductionText__keyline {
@@ -154,9 +220,21 @@ body {
 	padding-top: 5px;
 }
 
+.line-arrow {
+	overflow: hidden;
+	display: inline-block;
+	font-size: 12px;
+	width: 4em;
+	height: 4em;
+	margin-top: -2em;
+	top: 50%;
+}
 
-
-
+.line-arrow.down {
+	border-top: 1px solid #a9a9a9;
+	border-left: 1px solid #a9a9a9;
+	transform: rotate(-145deg) skew(-20deg);
+}
 
 
 
@@ -200,8 +278,8 @@ body {
 }
 
 .portfolioItems__previewButton {
-	background: $colorBlueLight;
-	color: white;
+	background: $colorGold;
+	color: $colorBlueDark;
 	text-decoration: none;
 	padding: 10px 20px;
 	font-family: $primaryFont;
@@ -237,7 +315,7 @@ body {
 	padding: 20px;
 	width: 100%;
 	h2 {
-		color: $colorGoldDark;
+		color: $colorBlueLight;
 		font-weight: 300;
 		font-size: 45px;
 	}
@@ -428,7 +506,6 @@ body {
 }
 
 .contactMain form {
-	width: 700px;
 	margin: 0 auto;
 	margin-top: 50px;
 	input, textarea {
@@ -449,14 +526,15 @@ body {
 
 .contactForm__container {
 	display: flex;
+	padding: 0 120px;
 }
 
 .contactForm__container--inputs {
-	width: 80%;
+	width: 70%;
 }
 
 .contactForm__container--info {
-	width: 20%;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -525,7 +603,10 @@ footer p {
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	text-align: center;
-	font-style: 12px;
+	font-size: 12px;
+	a {
+		color: #9f9f9f;
+	}
 }
 
 
