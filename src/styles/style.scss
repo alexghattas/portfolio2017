@@ -23,7 +23,7 @@ body {
 .wrapperIntro {
 	max-width: 1170px;
 	margin: 0 auto;
-	position: relative;
+	height: 150px;
 }
 
 .wrapperPortfolio {
@@ -91,78 +91,70 @@ body {
 
 
 
-	// Hero Section
+// 	Hero Section
+
+.heroSection {
+	background: url(../../assets/HackeUGiddy-edited-small.jpg);
+	background-size: contain;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.heroSection__triangle {
+	width: 100%;	
+	// background: red;
+}
+
+.st0{fill:#FFFFFF;}
+.st1{fill:#EFEFEF;}
+.st2{font-family:'Georgia-Bold';}
+.st3{font-size:541.8076px;}
+.st4{clip-path:url(#SVGID_2_);}
+.st5{fill:#077793;}
+.st6{fill:#0A6F87;}
+.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#0A6F87;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // .heroSection {
+// 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
+// 	clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
 // 	height: 1800px;
-// 	background:linear-gradient(to bottom right,rgba(37, 36, 46 ,.9),rgba(37, 36, 46 ,.9)), url('../../assets/StockSnap_Z9PPMFLPO8.jpg');
+// 	background:linear-gradient(to bottom right,rgba(7, 119, 147,0.9),rgba(7, 119, 147,0.9)), url('../../assets/mockup-863469_1280.jpg');
 // 	background-size: cover;
 // 	background-position: bottom right;
 // }
 
-// .heroSection__triangle {
+// .heroSection__top {
+// 	height: 100%;
+// 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
+// 	clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
 // 	position: relative;
-// 	height: 1000px;
-// 	background: url(../../assets/mockup-863469_1280.jpg);
-// 	background-size: cover;
-// 	overflow: hidden;
+// 	background:linear-gradient(to bottom right,rgba(37, 36, 46 , 0),rgba(37, 36, 46 , 0)), url('../../assets/HackeUGiddy.jpg');
+// 	background-size: contain;
+// 	background-position: top;
 // }
-
-// .heroSection__triangleCrop {
-// 	position:absolute;
-// 	content: " ";
-// 	z-index: -1;
-// 	height: 300px;
-// 	left:-5%;
-// 	bottom:-10px;
-// 	transform:rotate(45deg);
-// 	width:110%;
-// 	overflow: hidden;
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.heroSection {
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
-	clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
-	height: 1800px;
-	background:linear-gradient(to bottom right,rgba(7, 119, 147,0.9),rgba(7, 119, 147,0.9)), url('../../assets/mockup-863469_1280.jpg');
-	background-size: cover;
-	background-position: bottom right;
-}
-
-.heroSection__top {
-	height: 100%;
-	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-	clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-	position: relative;
-	background:linear-gradient(to bottom right,rgba(7, 89, 147,0),rgba(37, 36, 46 ,0)), url('../../assets/HackeUGiddy.jpg');
-	background-size: contain;
-	background-position: top;
-}
 
 .heroSection__snippetBio {
 	color: red;
@@ -187,7 +179,7 @@ body {
 	text-align: center;
 	color: white;
 	z-index: 15;
-	bottom: 940px;
+	bottom: 886px;
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
@@ -247,7 +239,6 @@ body {
 
 .portfolio__introText {
 	z-index: 99;
-	width: 400px;
 	text-align: center;
 	position: relative;
 	width: 600px;
@@ -255,7 +246,7 @@ body {
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	bottom: 200px;
+	bottom: 170px;
 	h2 {
 		font-size: 80px;
 		font-weight: 300;
@@ -415,6 +406,11 @@ body {
 	 'lower left',
 	 $colorGreyDark, 500);
 }
+
+// .skillSet__section::before {
+// 	background: url(../../assets/skillsection_skillword.png);
+// 	overflow: hidden;
+// }
 
 .skillSet__header {
 	text-align: center;

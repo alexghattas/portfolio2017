@@ -186,7 +186,7 @@ body {
 .wrapperIntro {
   max-width: 1170px;
   margin: 0 auto;
-  position: relative; }
+  height: 150px; }
 
 .wrapperPortfolio {
   max-width: 1170px;
@@ -242,21 +242,40 @@ body {
       padding-right: 0; }
 
 .heroSection {
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
-  clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
-  height: 1800px;
-  background: linear-gradient(to bottom right, rgba(7, 119, 147, 0.9), rgba(7, 119, 147, 0.9)), url("../../assets/mockup-863469_1280.jpg");
-  background-size: cover;
-  background-position: bottom right; }
-
-.heroSection__top {
-  height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-  clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-  position: relative;
-  background: linear-gradient(to bottom right, rgba(7, 89, 147, 0), rgba(37, 36, 46, 0)), url("../../assets/HackeUGiddy.jpg");
+  background: url(../../assets/HackeUGiddy-edited-small.jpg);
   background-size: contain;
-  background-position: top; }
+  background-position: top left;
+  background-repeat: no-repeat; }
+
+.heroSection__triangle {
+  width: 100%; }
+
+.st0 {
+  fill: #FFFFFF; }
+
+.st1 {
+  fill: #EFEFEF; }
+
+.st2 {
+  font-family: 'Georgia-Bold'; }
+
+.st3 {
+  font-size: 541.8076px; }
+
+.st4 {
+  -webkit-clip-path: url(#SVGID_2_);
+          clip-path: url(#SVGID_2_); }
+
+.st5 {
+  fill: #077793; }
+
+.st6 {
+  fill: #0A6F87; }
+
+.st7 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #0A6F87; }
 
 .heroSection__snippetBio {
   color: red;
@@ -277,7 +296,7 @@ body {
   text-align: center;
   color: white;
   z-index: 15;
-  bottom: 940px;
+  bottom: 886px;
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -319,7 +338,6 @@ body {
 
 .portfolio__introText {
   z-index: 99;
-  width: 400px;
   text-align: center;
   position: relative;
   width: 600px;
@@ -327,7 +345,7 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 200px; }
+  bottom: 170px; }
   .portfolio__introText h2 {
     font-size: 80px;
     font-weight: 300; }
