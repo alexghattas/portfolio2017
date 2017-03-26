@@ -2,7 +2,8 @@
 @import "partials/_setup";
 @import "partials/_mixins";
 @import "partials/_typography";
-@import "partials/angled-edges";
+@import "partials/_angled-edges";
+@import "partials/_animations";
 
 // * {border: 1px solid red;}
 body {
@@ -156,12 +157,14 @@ body {
 // }
 
 .heroSection__snippetBio {
+	visibility: hidden;
 	color: red;
 	position: absolute;
 	width: 400px;
 	top: 290px;
 	right: 0px;
 	z-index: 10;
+	animation: fadein(2s);
 	@include mq(large) {
 		right: 30px;
 		top: 6em;
@@ -688,6 +691,9 @@ body {
 	padding-bottom: 100px;
 	padding-top: 300px;
 	background-size: contain;
+	@include mq(small) {
+		padding-top: 150px;
+	}
 }
 .contactHeader {
 	padding-top: 200px;
