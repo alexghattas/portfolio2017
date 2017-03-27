@@ -5,29 +5,50 @@
 	<title>Alex Ghattas // Front-end Web Developer // Toronto, Canada</title>
 	<meta name="description" content="Currently located in Toronto, Ontario. Graduated from HackerYou immersive web development program.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="public/styles/style.css">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,700|Roboto:100, 300,500, 700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="top">
 
 	<header>
-		<div class="wrapperHeader">
-			<nav class="mainNavigation">
+		<nav class="mainNavigation">
+
 				<div class="mainNavigation__logo">
-				<p>Alex<span>Ghattas</span></p>
+				<a href="#top"><p class="mainNavigation__logo--text">Alex<span>Ghattas</span></p></a>
 				</div>
-			</nav>
-			<nav class="hamburgerMenu">
-				<i class="fa fa-bars" aria-hidden="true"></i>
-				<ul class="hamburgerMenu__list">
-					<li>Work</li>
-					<li>Skills</li>
-					<li>Contact</li>
-				</ul>
-			</nav>
+
+				<div class="hamburgerMenu">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+					<ul class="hamburgerMenu__list">
+						<li class="menuItem"><a class="menuItemA" href="#work">Work</a></li>
+						<li class="menuItem"><a  class="menuItemA" href="#skillsets">Skill Sets</a></li>
+						<li class="menuItem"><a  class="menuItemA" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+		</nav>
+	</header>
+
+	<section>
+		<div class="wrapperHeader">
+			<!-- <nav class="mainNavigation">
+				<div class="mainNavigation__wrapper">
+					<div class="mainNavigation__logo">
+					<p>Alex<span>Ghattas</span></p>
+					</div>
+					<div class="hamburgerMenu">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+						<ul class="hamburgerMenu__list">
+							<li>Work</li>
+							<li>Skills</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+				</div>
+			</nav> -->
 			<div class="heroSection__snippetBio fadeInTwo">
 				<h5>Toronto, Canada</h5>
 				<h1><span>Front-end</span> Developer.</h1>
@@ -45,7 +66,7 @@
 				<a class="line-arrow down" href="#"></a>
 			</div>
 		</div>
-	</header>
+	</section>
 
 
 
@@ -12003,7 +12024,7 @@
 	<section>
 		<div class="wrapperPortfolio">
 
-			<div class="portfolio__introText">
+			<div class="portfolio__introText" id="work">
 				<h4>Recent Work</h4>
 				<h2>Check it out.</h2>
 				<div class="portfolio__keyline">	</div>
@@ -12105,7 +12126,7 @@
 
 	<section class="skillSet__section">
 		<div class="wrapperSkills">
-			<div class="skillSet__header">
+			<div class="skillSet__header" id="skillsets">
 				<h6>This is just the beginning</h6>
 				<h2>Skill Sets</h2>
 				<div class="introductionText__keyline"></div>
@@ -12179,7 +12200,7 @@
 
 	<section class="contactMain">
 		<div class="wrapperContact">
-			<div class="contactHeader">
+			<div class="contactHeader" id="contact">
 				<h4>Contact</h4>
 			</div>
 

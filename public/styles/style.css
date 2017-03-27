@@ -745,21 +745,28 @@ body {
   max-width: 1170px;
   margin: 0 auto; }
 
+header {
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1000; }
+
 .hamburgerMenu {
-  position: fixed;
-  right: 30px;
-  top: 30px; }
+  margin-top: 7px; }
   .hamburgerMenu .fa {
     color: white;
-    font-size: 20px; }
+    font-size: 20px;
+    padding: 10px;
+    float: right; }
+
+.mainNavigation__logo--text {
+  padding: 10px; }
 
 .hamburgerMenu__list {
   z-index: 1000;
   visibility: hidden;
-  position: fixed;
-  right: 30px;
-  top: 50px;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-top: 45px; }
   .hamburgerMenu__list li {
     list-style: none;
     color: white;
@@ -772,21 +779,22 @@ body {
     width: 150px;
     text-transform: uppercase;
     letter-spacing: 3px; }
+  .hamburgerMenu__list a {
+    text-decoration: none;
+    color: white; }
 
 .disBtn {
   visibility: visible; }
 
 .mainNavigation {
+  position: fixed;
+  max-width: inherit;
+  top: 10px;
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between;
-  position: fixed;
-  z-index: 1000;
-  max-width: 1170px;
-  margin: 15px 0 0 15px; }
+      justify-content: space-between; }
 
 .mainNavigation__logo--background {
   background: rgba(0, 0, 0, 0.8);
@@ -794,7 +802,6 @@ body {
 
 .mainNavigation__logo {
   color: white;
-  padding: 10px;
   transition: all 0.9s ease; }
   .mainNavigation__logo p {
     font-family: "Roboto", sans-serif;
@@ -804,6 +811,9 @@ body {
     letter-spacing: 3px; }
   .mainNavigation__logo span {
     font-weight: 700; }
+  .mainNavigation__logo a {
+    text-decoration: none;
+    color: white; }
 
 .mainNavigation__links ul {
   display: -ms-flexbox;
@@ -1439,7 +1449,7 @@ body {
   margin-top: 50px; }
   .contactMain form input, .contactMain form textarea {
     width: 100%;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #c4c4c6;
     padding: 10px;
     margin: 10px;
     font-family: "Roboto", sans-serif;
@@ -1452,7 +1462,8 @@ body {
     padding: 10px 20px;
     background: #ffd667;
     letter-spacing: 3px;
-    transition: all 0.3s ease-in; }
+    transition: all 0.3s ease-in;
+    border: none; }
   .contactMain form input[type="submit"]:hover {
     background: #077793;
     color: white; }

@@ -9,6 +9,7 @@ $(window).scroll(function() {
 		});
 	});
 
+
 $(window).scroll(function() {
 		$('.portfolioItems__one--image, .portfolioItems__three--image').each(function(){
 		var imagePos = $(this).offset().top;
@@ -32,8 +33,9 @@ $(window).scroll(function() {
 		});
 	});
 
+
 $(window).scroll(function () {
-	$('.mainNavigation__logo').toggleClass("mainNavigation__logo--background ", ($(window).scrollTop() > 200));
+	$('.mainNavigation__logo--text, .fa-bars').toggleClass("mainNavigation__logo--background ", ($(window).scrollTop() > 200));
 });
 
 
@@ -45,3 +47,18 @@ $(".hamburgerMenu").click(
     $(".hamburgerMenu__list").toggleClass("fadeInTwo");
   }
 );
+
+// Add floating on hover of menu item
+$(".menuItem").hover(function () {
+    $(this).toggleClass("floating");
+ });
+
+
+// Smooth Scroll
+var $root = $('html, body');
+$('a').click(function() {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});

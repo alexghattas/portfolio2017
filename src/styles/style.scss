@@ -44,23 +44,32 @@ body {
 	margin: 0 auto;
 }
 
+header {
+	max-width: 1170px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 1000;
+}
+
 .hamburgerMenu {
-	position: fixed;
-	right: 30px;
-	top: 30px;
+	margin-top: 7px;
 	.fa {
 		color: white;
 		font-size: 20px;
+		padding: 10px;
+		float: right;
 	}
+}
+
+.mainNavigation__logo--text {
+	padding: 10px;
 }
 
 .hamburgerMenu__list {
 	z-index: 1000;
 	visibility: hidden;
-	position: fixed;
-	right: 30px;
-	top: 50px;
 	padding-left: 0;
+	margin-top: 45px;
 	li {
 		list-style: none;
 		color: white;
@@ -75,6 +84,13 @@ body {
 		letter-spacing: 3px;
 
 	}
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	a:hover {
+
+	}
 }
 
 .disBtn {
@@ -84,15 +100,15 @@ body {
 
 
 .mainNavigation {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	position: fixed;
-	z-index: 1000;
-	max-width: 1170px;
-	margin: 15px 0 0 15px;
+	max-width: inherit;
+	top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 
 }
+
 
 .mainNavigation__logo--background {
 	background: rgba(0, 0, 0, 0.8);
@@ -101,7 +117,6 @@ body {
 
 .mainNavigation__logo {
 	color: white;
-	padding: 10px;
 	transition: all 0.9s ease;
 	p {
 		font-family: $primaryFont;
@@ -112,6 +127,10 @@ body {
 	}
 	span {
 		font-weight: 700;
+	}
+	a {
+		text-decoration: none;
+		color: white;
 	}
 }
 
@@ -774,7 +793,7 @@ body {
 	margin-top: 50px;
 	input, textarea {
 		width: 100%;
-		border: 1px solid #f0f0f0;
+		border: 1px solid #c4c4c6;
 		padding: 10px;
 		margin: 10px;
 		font-family: $primaryFont;
@@ -789,6 +808,7 @@ body {
 		background: $colorGold;
 		letter-spacing: 3px;
 		transition: all 0.3s ease-in;
+		border: none;
 	}
 	input[type="submit"]:hover {
 		background: $colorBlueLight;
