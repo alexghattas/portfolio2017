@@ -53,15 +53,24 @@ body {
 	justify-content: space-between;
 	position: fixed;
 	z-index: 999;
-	width: 1170px;
+	max-width: 1170px;
+	margin: 15px 0 0 15px;
+
+}
+
+.mainNavigation__logo--background {
+	background: rgba(0, 0, 0, 0.8);
+	transition: all 0.9s ease;
 }
 
 .mainNavigation__logo {
 	color: white;
+	padding: 10px;
+	transition: all 0.9s ease;
 	p {
 		font-family: $primaryFont;
 		font-weight: 100;
-		font-size: 20px;
+		font-size: 24px;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 	}
@@ -196,6 +205,7 @@ body {
 }
 
 .introductionText {
+	visibility: hidden;
 	position: absolute;
 	text-align: center;
 	color: white;
@@ -328,6 +338,12 @@ body {
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	transition: all 0.3s ease-in;
+}
+
+.portfolioItems__previewButton:hover {
+	background: $colorBlueLight;
+	color: white;
 }
 
 .portfolioItems__github {
@@ -381,6 +397,7 @@ body {
 	p {
 		color: $colorBlueDark;
 		padding: 10px 0 0 0;
+		line-height: 1.5em;
 	}
 }
 
@@ -729,6 +746,11 @@ body {
 		padding: 10px 20px;
 		background: $colorGold;
 		letter-spacing: 3px;
+		transition: all 0.3s ease-in;
+	}
+	input[type="submit"]:hover {
+		background: $colorBlueLight;
+		color: white;
 	}
 }
 
@@ -833,10 +855,6 @@ footer p {
 		color: #9f9f9f;
 	}
 }
-
-
-
-
 
 
 

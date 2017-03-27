@@ -388,6 +388,23 @@ fadeIn
     transform: scale(1);
     opacity: 1; } }
 
+.fadeInTwo {
+  animation-name: fadeInTwo;
+  -webkit-animation-name: fadeInTwo;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important; }
+
+@keyframes fadeInTwo {
+  0% {
+    transform: scale(1);
+    opacity: 0.0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 /*
 ==============================================
 expandOpen
@@ -749,14 +766,21 @@ body {
       justify-content: space-between;
   position: fixed;
   z-index: 999;
-  width: 1170px; }
+  max-width: 1170px;
+  margin: 15px 0 0 15px; }
+
+.mainNavigation__logo--background {
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.9s ease; }
 
 .mainNavigation__logo {
-  color: white; }
+  color: white;
+  padding: 10px;
+  transition: all 0.9s ease; }
   .mainNavigation__logo p {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 3px; }
   .mainNavigation__logo span {
@@ -853,6 +877,7 @@ body {
         padding: 5px 0; } }
 
 .introductionText {
+  visibility: hidden;
   position: absolute;
   text-align: center;
   color: white;
@@ -960,7 +985,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in; }
+
+.portfolioItems__previewButton:hover {
+  background: #077793;
+  color: white; }
 
 .portfolioItems__github {
   font-family: "Roboto", sans-serif;
@@ -1009,7 +1039,8 @@ body {
         font-size: 30px; } }
   .portfolioItems__text p {
     color: #25242e;
-    padding: 10px 0 0 0; }
+    padding: 10px 0 0 0;
+    line-height: 1.5em; }
 
 .portfolioItems__one {
   display: -ms-flexbox;
@@ -1395,7 +1426,11 @@ body {
     width: initial;
     padding: 10px 20px;
     background: #ffd667;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in; }
+  .contactMain form input[type="submit"]:hover {
+    background: #077793;
+    color: white; }
 
 .contactForm__container {
   display: -ms-flexbox;
