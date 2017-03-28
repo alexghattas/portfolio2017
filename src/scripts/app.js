@@ -1,9 +1,9 @@
 $(window).scroll(function() {
-		$('.introductionText, .portfolioItems__one--content, .portfolioItems__two--content, .portfolioItems__three--content').each(function(){
+		$('.introductionText, .portfolioItems__one--content, .portfolioItems__two--content, .portfolioItems__three--content, .portfolioItems__four--content').each(function(){
 		var imagePos = $(this).offset().top;
 
 		var topOfWindow = $(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
+			if (imagePos < topOfWindow+650) {
 				$(this).addClass("fadeInTwo");
 			}
 		});
@@ -15,7 +15,7 @@ $(window).scroll(function() {
 		var imagePos = $(this).offset().top;
 
 		var topOfWindow = $(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
+			if (imagePos < topOfWindow+650) {
 				$(this).addClass("slideRight");
 			}
 		});
@@ -23,11 +23,11 @@ $(window).scroll(function() {
 
 
 $(window).scroll(function() {
-		$('.portfolioItems__two--image').each(function(){
+		$('.portfolioItems__two--image, .portfolioItems__four--image').each(function(){
 		var imagePos = $(this).offset().top;
 
 		var topOfWindow = $(window).scrollTop();
-			if (imagePos < topOfWindow+400) {
+			if (imagePos < topOfWindow+650) {
 				$(this).addClass("slideLeft");
 			}
 		});
@@ -41,18 +41,22 @@ $(window).scroll(function () {
 
 
 
-$(".hamburgerMenu").click(
+$(".hamburgerMenuIcon").click(
   function() {
     $(".hamburgerMenu__list").toggleClass("disBtn");
     $(".hamburgerMenu__list").toggleClass("fadeInTwo");
   }
 );
 
+$(".menuItemA").click( function() {
+	$(".hamburgerMenu__list").toggleClass("disBtn");
+	$(".hamburgerMenu__list").toggleClass("fadeInTwo");
+})
+
 // Add floating on hover of menu item
 $(".menuItem").hover(function () {
     $(this).toggleClass("floating");
  });
-
 
 // Smooth Scroll
 var $root = $('html, body');

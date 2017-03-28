@@ -29,9 +29,6 @@ body {
 .wrapperPortfolio {
 	max-width: 1170px;
 	margin: 0 auto;
-	@include mq(small) {
-		margin-top: 280px;
-	}
 }
 
 .wrapperSkills {
@@ -51,13 +48,23 @@ header {
 	z-index: 1000;
 }
 
+
+
+
+
 .hamburgerMenu {
 	margin-top: 7px;
+	@include mq(small) {
+		margin-top: 6px;
+	}
 	.fa {
 		color: white;
 		font-size: 20px;
 		padding: 10px;
 		float: right;
+		@include mq(small) {
+			padding: 6px;
+		}
 	}
 }
 
@@ -97,6 +104,13 @@ header {
 	visibility: visible;
 }
 
+.firebaseIcon {
+	width: 50px;
+}
+
+.firebaseIconYellow {
+	width: 80px;
+}
 
 
 .mainNavigation {
@@ -106,6 +120,10 @@ header {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	@include mq(large) {
+		width: 100%;
+		margin: 0 auto;
+	}
 
 }
 
@@ -124,6 +142,9 @@ header {
 		font-size: 24px;
 		text-transform: uppercase;
 		letter-spacing: 3px;
+		@include mq(medium) {
+			font-size: 14px;
+		}
 	}
 	span {
 		font-weight: 700;
@@ -162,15 +183,21 @@ header {
 // 	Hero Section
 
 .heroSection {
+	width: 100%;
 	background: url(../../assets/HackeUGiddy-edited-small.jpg);
 	background-size: contain;
 	background-position: top left;
 	background-repeat: no-repeat;
+	@include mq(medium) {
+		height: 47em;
+	}
 }
 
 .heroSection__triangle {
 	width: 100%;	
-	// background: red;
+	@include mq(medium) {
+		display: none;
+	}
 }
 
 .st0{fill:#FFFFFF;}
@@ -183,42 +210,6 @@ header {
 .st7{fill-rule:evenodd;clip-rule:evenodd;fill:#0A6F87;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .heroSection {
-// 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 59%);
-// 	clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 59%);
-// 	height: 1800px;
-// 	background:linear-gradient(to bottom right,rgba(7, 119, 147,0.9),rgba(7, 119, 147,0.9)), url('../../assets/mockup-863469_1280.jpg');
-// 	background-size: cover;
-// 	background-position: bottom right;
-// }
-
-// .heroSection__top {
-// 	height: 100%;
-// 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-// 	clip-path: polygon(0 0, 100% 0%, 100% 15%, 0 59%);
-// 	position: relative;
-// 	background:linear-gradient(to bottom right,rgba(37, 36, 46 , 0),rgba(37, 36, 46 , 0)), url('../../assets/HackeUGiddy.jpg');
-// 	background-size: contain;
-// 	background-position: top;
-// }
 
 .heroSection__snippetBio {
 	visibility: hidden;
@@ -235,15 +226,19 @@ header {
 		text-align: center;
 	}
 	@include mq(medium) {
+		top: 8em;
+		right: 0;
+	}
+	@include mq(small) {
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
 		right: 0;
-		width: 100%;
+		width: 70%;
+		top: 7em;
 	}
-	@include mq(small) {
+	@include mq(xsmall) {
 		width: 100%;
-		top: 4em;
 	}
 	h1{
 		span {
@@ -278,6 +273,7 @@ header {
 	}
 	@include mq(medium) {
 		width: 100%;
+		background: #0C0D0F;
 	}
 	@include mq(small) {
 		top: 18rem;
@@ -305,6 +301,8 @@ header {
 	}
 	a {
 		margin-top: 40px;
+		text-decoration: none;
+		color: $colorGold;
 		@include mq(large) {
 			display: none;
 		}
@@ -346,13 +344,9 @@ header {
 .portfolio__introText {
 	z-index: 99;
 	text-align: center;
-	position: relative;
 	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	bottom: 170px;
+	margin: 0 auto;
+
 	@include mq(large) {
 		bottom: 95px;
 	}
@@ -377,6 +371,10 @@ header {
 }
 
 // Universal Portfolio Elements
+.portfolioItems {
+	margin-top: 5rem;
+}
+
 .portfolio__keyline {
 	border-bottom: 1px solid $colorBlueDark;
 	width: 30px;
@@ -468,7 +466,6 @@ header {
 		justify-content: center;
 		margin: 0 60px;
 		padding: 35px;
-		background: #eeeeee;
 	}
 	@include mq(medium) {
 		margin: 0 30px;
@@ -528,6 +525,7 @@ header {
 		margin: 40px 60px 0px 60px;
 		padding: 35px;
 		background: #eeeeee;
+		margin: 10 0;
 	}
 	@include mq(medium) {
 		margin: 20px 30px 0px 30px;
@@ -582,12 +580,13 @@ header {
 	margin-top: 400px;
 	visibility: hidden;
 	@include mq(large) {
+		background: #eeeeee;
+		margin: 10 0;
 		position: initial;
 		flex-direction: column-reverse;
 		justify-content: center;
 		margin: 40px 60px 0px 60px;
 		padding: 35px;
-		background: #eeeeee;
 	}
 	@include mq(medium) {
 		margin: 20px 30px 0px 30px;
@@ -629,6 +628,67 @@ header {
 .portfolioItems__three--content {
 	width: 50%;
 	display: flex;
+	@include mq(large) {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+
+// Portfolio Item Two
+.portfolioItems__four {
+	display: flex;
+	position: relative;
+	margin-top: 400px;
+	@include mq(large) {
+		position: initial;
+		flex-direction: column;
+		justify-content: center;
+		margin: 40px 60px 0px 60px;
+		padding: 35px;
+		background: #eeeeee;
+		margin: 10 0;
+	}
+	@include mq(medium) {
+		margin: 20px 30px 0px 30px;
+		padding: 15px;
+	}
+	@include mq(small) {
+		margin: 20px 10px 0px 10px;
+		padding: 10px;
+	}
+
+}
+
+.portfolioItems__four--image {
+	width: 600px;
+	text-align: left;
+	position: relative;
+	visibility: hidden;
+	@include mq(large) {
+		width: 100%;
+		text-align: center;
+		margin: 40px 0;
+	}
+	img {
+		width: 600px;
+		position: absolute;
+		right: -153px;
+		bottom: -34px;
+		@include mq(large) {
+			width: 55%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.portfolioItems__four--content {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	visibility: hidden;
 	@include mq(large) {
 		width: 100%;
 		justify-content: center;
@@ -890,6 +950,14 @@ header {
 	padding: 10px;
 	background: $colorBlueDark;
 	margin-right: 10px;
+	a {
+		text-decoration: none;
+		color: $colorGold;
+		transition: all 0.9s ease;
+	}
+	a:hover {
+		color: $colorBlueLight;
+	}
 }
 
 .socialLinks i {
